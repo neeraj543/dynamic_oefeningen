@@ -1,5 +1,6 @@
 import './App.css'
 import {MenuProduct} from "../components/MenuProduct.jsx";
+import {PRODUCTS_DATA} from "./data/data.js";
 
 
 function App() {
@@ -7,9 +8,9 @@ function App() {
         <>
             <div style={{fontFamily:"sans-serif"}}>
                 <h1 style={{fontWeight: 'bold'}}>Menu</h1>
-                <MenuProduct productName="cola" price='20'/>
-                <MenuProduct productName="Juice" price='10'/>
-                <MenuProduct productName="Water" price='30'/>
+                <MenuProduct product={PRODUCTS_DATA[0]}/>
+                <MenuProduct product={PRODUCTS_DATA[1]}/>
+                <MenuProduct product={PRODUCTS_DATA[2]}/>
             </div>
         </>
     );
