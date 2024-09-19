@@ -1,8 +1,9 @@
 export function MenuProduct(props) {
-    const { product:yolo } = props;
+    const { product} = props;
+    product.size ??= "0";
     return (
-        <div>
-            {`${yolo.name} costs ${yolo.price} \u20AC!!!`}
+        <div style ={{margin: "2vw", fontSize: "larger"}}>
+            {`${product.name} (${product.size} cl)  ${product.price} -- \u20AC`}
         </div>
     );
 }
