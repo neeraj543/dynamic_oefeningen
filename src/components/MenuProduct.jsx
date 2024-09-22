@@ -1,33 +1,49 @@
+// Menu Product
 export function MenuProduct(props) {
     const {product} = props;
-    if (!product?.name  )return ;
 
+    if (!product?.name) return null;
 
-    // styles
-    const containerStyle = { margin: "2vw", fontSize: "larger", display: "flex" };
-    const nameStyle = { flex: 1 };
-    const priceStyle = { flex: 1 };
+    // Styles
+    const containerStyle = {margin: "2vw", fontSize: "larger", display: "flex"};
+    const nameStyle = {flex: 1};
+    const priceStyle = {flex: 1};
 
-    //Product parts
-    const productNameAndSize = (
-        <>
-            {product.name}
-            {product.size && <span style={{ color: "blue", display: "inline" }}> ({product.size} cl)</span>}
-        </>
-    );
-    const productNote = product.note && <div style={{ color: "blue", fontSize: 14 }}>{product.note}</div>;
+    // Main codes
+
     const productPrice = <div style={priceStyle}>{product.price} &euro;</div>;
-
 
     return (
         <div style={containerStyle}>
             <div style={nameStyle}>
-                {productNameAndSize}
-                {productNote}
+                <span>{product.name}</span>
+                <ProductSize S={product}/>
+                <ProductNote N={product}/>
             </div>
             {productPrice}
         </div>
     );
-
 }
-// product.size ??= "";
+
+// Product Size
+function ProductSize(props) {
+    const {S} = props;
+    if (!S.size) return null;
+    return (
+        <span style={{color: "blue", display: "inline", fontSize: "12px"}}>
+            ({S.size})
+        </span>
+    );
+}
+
+// Product Note
+function ProductNote(props) {
+    const {N} = props;
+    if (!N.note) return null;
+
+    return (
+        <div style={{color: "red", fontSize: 14, fontStyle: "italic"}}>
+            {N.note}
+        </div>
+    )
+}
