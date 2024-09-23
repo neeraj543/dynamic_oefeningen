@@ -1,17 +1,17 @@
-import "normalize.css";
+// src/App.jsx
+import React from "react";
+import "normalize.css"; // Ensure normalize.css is imported
 import './App.css';
-import { MenuCard } from "./components/MenuCard.jsx";
-import { PRODUCTS_DATA } from "./data/data.js";
+import { MenuCardPage } from "./pages/MenuCardPages.jsx";  // Import the new page
+import { PicturesPage } from "./pages/PicturesPage.jsx";  // Import the new page
 
 function App() {
     return (
         <>
-                {/* Rendering MenuCard with products */}
-                <MenuCard products={PRODUCTS_DATA} />
+            <MenuCardPage />
+            <PicturesPage />
         </>
     );
 }
 
 export default App;
-
-

@@ -30,7 +30,7 @@ function ProductSize(props) {
     const {S} = props;
     if (!S.size) return null;
     return (
-        <span style={{color: "blue", display: "inline", fontSize: "12px"}}>
+        <span style={{color: "blue", display: "inline", fontSize: "12px", marginLeft: "10px"}}>
             ({S.size})
         </span>
     );
@@ -42,7 +42,7 @@ function ProductNote(props) {
     if (!N.note) return null;
 
     return (
-        <div style={{color: "red", fontSize: 14, fontStyle: "italic"}}>
+        <div style={{color: "darkorange", fontSize: 14, fontStyle: "italic"}}>
             {N.note}
         </div>
     )
