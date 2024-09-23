@@ -1,50 +1,42 @@
-// Menu Product
-export function MenuProduct(props) {
-    const {product} = props;
+import React from 'react';
+import { Row, Col } from 'react-bootstrap';
 
+// Menu Product
+export function MenuProduct({ product }) {
     if (!product?.name) return null;
 
-    // Styles
-        const containerStyle = {margin: "2vw", fontSize: "larger", display: "flex", justifyContent: "center",  alignItems: "center",
-        };
-        const nameStyle = {flex: '0 0 300px'};
-        const priceStyle = {flex: 1};
-
-    // Main codes
-
-    const productPrice = <div style={priceStyle}>{product.price} &euro;</div>;
-
     return (
-        <div style={containerStyle}>
-            <div style={nameStyle}>
-                <span>{product.name}</span>
-                <ProductSize S={product}/>
-                <ProductNote N={product}/>
-            </div>
-            {productPrice}
+        <div className="my-4 mx-5"> {/* Bootstrap margin utility for vertical spacing */}
+            <Row className="align-items-center justify-content-start">
+                <Col xs="auto" className="text-start" style={{ minWidth: "450px" }}> {/* Fixed width with text alignment */}
+                    <span>{product.name}</span>
+                    <ProductSize size={product.size} />
+                    <ProductNote note={product.note} />
+                </Col>
+                <Col xs="auto" className="text-end">
+                    <span>{product.price} &euro;</span>
+                </Col>
+            </Row>
         </div>
     );
 }
 
 // Product Size
-function ProductSize(props) {
-    const {S} = props;
-    if (!S.size) return null;
+function ProductSize({ size }) {
+    if (!size) return null;
     return (
-        <span style={{color: "blue", display: "inline", fontSize: "12px", marginLeft: "10px"}}>
-            ({S.size})
+        <span className="text-primary ms-2" style={{ fontSize: "12px" }}> {/* Bootstrap text and margin classes */}
+            ({size})
         </span>
     );
 }
 
 // Product Note
-function ProductNote(props) {
-    const {N} = props;
-    if (!N.note) return null;
-
+function ProductNote({ note }) {
+    if (!note) return null;
     return (
-        <div style={{color: "darkorange", fontSize: 14, fontStyle: "italic"}}>
-            {N.note}
+        <div className="text-warning fst-italic" style={{ fontSize: "14px" }}> {/* Bootstrap text color and font style */}
+            {note}
         </div>
-    )
+    );
 }
