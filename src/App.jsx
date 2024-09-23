@@ -1,16 +1,27 @@
-// src/App.jsx
-import React from "react";
-import "normalize.css"; // Ensure normalize.css is imported
-import './App.css';
-import { MenuCardPage } from "./pages/MenuCardPages.jsx";  // Import the new page
-import { PicturesPage } from "./pages/PicturesPage.jsx";  // Import the new page
+import React from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import { MenuCardPage } from './pages/MenuCardPages.jsx';  // Adjust the path if necessary
+import { PicturesPage } from './pages/PicturesPage';  // Adjust the path if necessary
 
 function App() {
     return (
-        <>
-            <MenuCardPage />
-            <PicturesPage />
-        </>
+        <div>
+            <Tabs>
+                <TabList>
+                    <Tab>Menu</Tab>
+                    <Tab>Pictures</Tab>
+                </TabList>
+
+                <TabPanel>
+                    <MenuCardPage />
+                </TabPanel>
+
+                <TabPanel>
+                    <PicturesPage />
+                </TabPanel>
+            </Tabs>
+        </div>
     );
 }
 

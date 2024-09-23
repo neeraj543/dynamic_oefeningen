@@ -5,9 +5,10 @@ export function MenuProduct(props) {
     if (!product?.name) return null;
 
     // Styles
-    const containerStyle = {margin: "2vw", fontSize: "larger", display: "flex"};
-    const nameStyle = {flex: 1};
-    const priceStyle = {flex: 1};
+        const containerStyle = {margin: "2vw", fontSize: "larger", display: "flex", justifyContent: "center",  alignItems: "center",
+        };
+        const nameStyle = {flex: '0 0 300px'};
+        const priceStyle = {flex: 1};
 
     // Main codes
 
