@@ -11,39 +11,55 @@ In this case I decided that that's just fine...
 const PICTURES_DATA = [
     {
         id: 1,
-        credit:
-            "https://unsplash.com/@acharki95?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+        credit: "https://unsplash.com/@acharki95?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
         author: "Aziz Acharki",
         name: "aziz-acharki-oEibQEiq2cM-unsplash.jpg"
     },
     {
         id: 2,
-        credit:
-            "https://unsplash.com/@acharki95?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+        credit: "https://unsplash.com/@acharki95?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
         author: "Aziz Acharki",
         name: "aziz-acharki-U3C79SeHa7k-unsplash.jpg"
     },
     {
         id: 3,
-        credit:
-            "https://unsplash.com/@yan_slg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+        credit: "https://unsplash.com/@yan_slg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
         author: "Boudhayan Bardhan",
         name: "boudhayan-bardhan-jITjssEKv2E-unsplash.jpg"
     },
     {
         id: 4,
-        credit:
-            "https://unsplash.com/@mkaminski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+        credit: "https://unsplash.com/@mkaminski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
         author: "Madison Kaminski",
         name: "madison-kaminski-3J_4c26cFpU-unsplash.jpg"
     },
 ];
 
-
-export function PicturesPage(){
-    return(
+export function PicturesPage() {
+    return (
         <div>
-            <h1> Hey this is the pictures page  !!! </h1>
+            <h1 style={{ paddingLeft: "30px" }}>Picture Gallery</h1>
+            <div style={{ padding: "0px 20px", display: 'flex',flexWrap: 'wrap',  justifyContent: 'flex-start'}}>
+                {PICTURES_DATA.map((picture) => {
+                    const { credit, author, name } = picture; // Destructure the properties
+
+                    return (
+                        <div key={picture.id} style={{ margin: "10px", textAlign: "start" }}>
+                            <img
+                                src={`images/${name}`} // Use name directly
+                                alt={name} // Use name directly
+                                width="350px"
+                                style={{ height: "auto" }}
+                            />
+                            <div>
+                                <a href={credit} target="_blank" rel="noopener noreferrer">
+                                    {author}
+                                </a>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
-    )
+    );
 }
