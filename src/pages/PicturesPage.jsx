@@ -41,13 +41,13 @@ export function PicturesPage() {
             <h1 style={{ paddingLeft: "30px" }}>Picture Gallery</h1>
             <div style={{ padding: "0px 20px", display: 'flex',flexWrap: 'wrap',  justifyContent: 'flex-start'}}>
                 {PICTURES_DATA.map((picture) => {
-                    const { credit, author, name } = picture; // Destructure the properties
+                    const { credit, author, name } = picture;
 
                     return (
                         <div key={picture.id} style={{ margin: "10px", textAlign: "start" }}>
                             <img
-                                src={`images/${name}`} // Use name directly
-                                alt={name} // Use name directly
+                                src={`images/${name}`}
+                                alt={name}
                                 width="350px"
                                 style={{ height: "auto" }}
                             />

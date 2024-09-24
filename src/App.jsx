@@ -22,6 +22,10 @@ function App() {
                 <TabPanel>
                     <PicturesPage />
                 </TabPanel>
+
+                <TabPanel>
+                    {/*<PicturesPage />*/}
+                </TabPanel>
             </Tabs>
         </div>
     );
