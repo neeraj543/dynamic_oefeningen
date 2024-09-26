@@ -9,6 +9,5 @@ export function NumbersPage(){
                     <Numbers numbers={NUMBER_DATA} title="All Numbers"/>
                 </div>
             </div>
-
         )
 }
