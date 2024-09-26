@@ -3,8 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { MenuCardPage } from './pages/MenuCardPages.jsx';  // Adjust the path if necessary
-import { PicturesPage } from './pages/PicturesPage';  // Adjust the path if necessary
+import { MenuCardPage } from './pages/MenuCardPages.jsx';
+import { PicturesPage } from './pages/PicturesPage';
+import {NumbersPage} from "./pages/NumbersPage.jsx";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <TabList>
                     <Tab>Menu</Tab>
                     <Tab>Pictures</Tab>
+                    <Tab>Numbersss</Tab>
                 </TabList>
 
                 <TabPanel>
@@ -24,7 +26,7 @@ function App() {
                 </TabPanel>
 
                 <TabPanel>
-                    {/*<PicturesPage />*/}
+                    <NumbersPage />
                 </TabPanel>
             </Tabs>
         </div>
