@@ -3,7 +3,7 @@ import { Numbers } from "../components/Numbers.jsx";
 
 export function NumbersPage(){
         return (
-            <div>
+            <div style ={{background:"lavender"}}>
                 <h1 style={{paddingLeft: "30px"}}>Numbers</h1>
                 <div style = {{paddingLeft: "50px"}}>
                     <Numbers numbers={NUMBER_DATA} title="All Numbers"/>

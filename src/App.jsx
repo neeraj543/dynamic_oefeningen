@@ -7,6 +7,7 @@ import { MenuCardPage } from './pages/MenuCardPages.jsx';
 import { PicturesPage } from './pages/PicturesPage';
 import {NumbersPage} from "./pages/NumbersPage.jsx";
 import {NumberFunctionPages} from "./pages/NumberFunctionPages.jsx";
+import {CarsPage} from "./pages/CarsPage.jsx";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     <Tab>Menu</Tab>
                     <Tab>Pictures</Tab>
                     <Tab>Numbersss</Tab>
+                    <Tab>Cars</Tab>
                 </TabList>
 
                 <TabPanel>
@@ -29,6 +31,11 @@ function App() {
                 <TabPanel>
                     <NumbersPage />
                     <NumberFunctionPages/>
+                </TabPanel>
+
+
+                <TabPanel>
+                    <CarsPage/>
                 </TabPanel>
             </Tabs>
         </div>
