@@ -1,33 +1,62 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+
+
+const colorMap = {
+    blauw: "blue",
+    geel: "yellow",
+    zwart: "black",
+    wit: "white",
+    rood: "red",
+    grijs: "grey",
+    groen: "green",
+}
+
 
 // Car
-export function Car(props) {
-    const { name, brand, type, color } = props.ayo;
+export function Car(props){
+    const { name, brand, type, color, note } = props.cars;
+    const translatedColor = colorMap[color] || color;
 
     return (
-        <div style={{ marginBottom: '15px', padding: '10px', border: '1px solid #ccc' }}>
+        <Container style={{ padding: "10px 20px",  marginBottom: "10px", backgroundColor: "white", textAlign: "center"}}>
             <h4>{name}</h4>
-            <p><strong>Brand:</strong> {brand}</p>
-            {type && <p><strong>Type:</strong> {type}</p>}
-            {color && <p><strong>Color:</strong> {color}</p>}
-        </div>
+            <p> <strong> Brand: </strong>  {brand}</p>
+            {type && <p><strong> Type: </strong> {type}</p>}
+            {note && <p><strong> Note: </strong> {note} </p>}
+            {color && <p style={{ backgroundColor: translatedColor, color: translatedColor === "black" ? "white" : null}}><strong>Color: </strong> {color}</p>}
+        </Container>
     );
 }
 
-
-// Cars
+//Cars
 export function Cars(props){
-    const { cars, title } = props;
+    const {cars, title, info} = props;
 
     return (
-        <div>
-            <h3>{title}</h3>
-            <div>
+        <Container>
+            <h1 className="text-lg-center ">{title}  </h1>
+            <Row>
                 {cars.map(car => (
-                    <Car key={car.id} ayo={car} /> //change the ayo
+                    <Col xs={6} md={4} lg={3} className="mb-3" key={car.id}>
+                        <Car cars={car} />
+                    </Col>
                 ))}
-            </div>
-        </div>
+            </Row>
+        </Container>
     );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
