@@ -6,7 +6,6 @@ import 'react-tabs/style/react-tabs.css';
 import { MenuCardPage } from './pages/MenuCardPages.jsx';
 import { PicturesPage } from './pages/PicturesPage';
 import {NumbersPage} from "./pages/NumbersPage.jsx";
-import {NumberFunctionPages} from "./pages/NumberFunctionPages.jsx";
 import {CarsPage} from "./pages/CarsPage.jsx";
 
 function App() {
@@ -30,7 +29,6 @@ function App() {
 
                 <TabPanel>
                     <NumbersPage />
-                    <NumberFunctionPages/>
                 </TabPanel>
 
 

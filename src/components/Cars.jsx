@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import {Section} from "./Section.jsx";
 
 
 const colorMap = {
@@ -34,8 +35,7 @@ export function Cars(props){
     const {cars, title, info} = props;
 
     return (
-        <Container>
-            <h1 className="text-lg-center ">{title}  </h1>
+        <Section title = {title}>
             <Row>
                 {cars.map(car => (
                     <Col xs={6} md={4} lg={3} className="mb-3" key={car.id}>
@@ -43,7 +43,8 @@ export function Cars(props){
                     </Col>
                 ))}
             </Row>
-        </Container>
+        </Section>
+
     );
 }
 
