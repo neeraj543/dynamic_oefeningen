@@ -17,11 +17,11 @@ const colorMap = {
 
 // Car
 export function Car(props){
-    const { id, name, brand, type, color, note } = props.cars;
+    const { id, name, brand, type, color, note } = props.car;
     const translatedColor = colorMap[color] || color;
 
     return (
-        <SectionCard key={id}>
+        <SectionCard key={id}/* key not needed*/>
                 <h4>{name}</h4>
                 <p> <strong> Brand: </strong>  {brand}</p>
                 {type && <p><strong> Type: </strong> {type}</p>}
@@ -37,7 +37,7 @@ export function Cars(props){
 
     return (
         <Section title = {title}>
-            {cars.map(car => <Car cars={car} key={car.id}/>)}
+            {cars.map(car => <Car car={car} key={car.id}/>)}
         </Section>
     );
 }
