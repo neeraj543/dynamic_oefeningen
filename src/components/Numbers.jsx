@@ -1,20 +1,17 @@
 import React from 'react';
 import {Section} from "./Section.jsx";
 import {SectionCard} from "./SectionCard.jsx";
+import '../App.css';
 
 export function Numbers(props) {
-    const { numbers, title } = props;
+    const { numbers, title, className} = props;
 
     return (
         <Section title={title} >
-                {numbers?.map((num, index) => <SectionCard key = {index}> {num} </SectionCard>)}
+                   {numbers?.map((num, index) => <SectionCard key = {index}> {num} </SectionCard>)}
         </Section>
     );
 }
-
-
-
-
 
 {/* <Container>*/}
 {/*   <h1 className="text-lg-center mb-4"> {title} </h1>*/}
