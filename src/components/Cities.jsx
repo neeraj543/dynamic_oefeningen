@@ -1,6 +1,9 @@
 import {SectionCard} from "./SectionCard.jsx";
 import {Section} from "./Section.jsx";
 
+
+
+
 function City(props) {
     const {city} = props;
     return (

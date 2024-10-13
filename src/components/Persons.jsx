@@ -14,8 +14,7 @@ export function Persons(props){
 export function Person(props){
     const {id, name, age, city} = props.person;
     return(
-        <SectionCard >
-            <h4>{name}</h4>
+        <SectionCard title={name}>
             <p> <strong> Id: </strong>  {id}</p>
             {age && <p><strong> Age: </strong> {age}</p>}
             {city && <p><strong> City: </strong> {city} </p>}

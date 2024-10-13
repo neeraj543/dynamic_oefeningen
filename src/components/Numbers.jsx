@@ -4,11 +4,11 @@ import {SectionCard} from "./SectionCard.jsx";
 import '../App.css';
 
 export function Numbers(props) {
-    const { numbers, title, className} = props;
+    const { numbers, title} = props;
 
     return (
         <Section title={title} >
-                   {numbers?.map((num, index) => <SectionCard key = {index}> {num} </SectionCard>)}
+                   {numbers?.map((num, index) => <SectionCard key = {index}>{num}</SectionCard>)}
         </Section>
     );
 }

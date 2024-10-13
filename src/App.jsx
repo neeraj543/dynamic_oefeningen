@@ -8,6 +8,8 @@ import { PicturesPage } from './pages/PicturesPage';
 import {NumbersPage} from "./pages/NumbersPage.jsx";
 import {CarsPage} from "./pages/CarsPage.jsx";
 import {PersonsPage} from "./pages/PersonsPage.jsx";
+import {EventsPage} from "./pages/EventsPage.jsx";
+import {StatePage} from "./pages/StatePage.jsx";
 
 function App() {
     return (
@@ -19,6 +21,8 @@ function App() {
                     <Tab>Numbers</Tab>
                     <Tab>Cars</Tab>
                     <Tab>Persons</Tab>
+                    <Tab>Events page</Tab>
+                    <Tab>State</Tab>
                 </TabList>
 
                 <TabPanel>
@@ -39,6 +43,14 @@ function App() {
 
                 <TabPanel>
                     <PersonsPage/>
+                </TabPanel>
+
+                <TabPanel>
+                    <EventsPage/>
+                </TabPanel>
+
+                <TabPanel>
+                    <StatePage/>
                 </TabPanel>
             </Tabs>
         </div>

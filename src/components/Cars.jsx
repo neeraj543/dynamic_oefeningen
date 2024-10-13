@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import {Section} from "./Section.jsx";
 import {SectionCard} from "./SectionCard.jsx";
 
@@ -21,8 +20,7 @@ export function Car(props){
     const translatedColor = colorMap[color] || color;
 
     return (
-        <SectionCard key={id}/* key not needed*/>
-                <h4>{name}</h4>
+        <SectionCard title={name}/* key not needed*/>
                 <p> <strong> Brand: </strong>  {brand}</p>
                 {type && <p><strong> Type: </strong> {type}</p>}
                 {note && <p><strong> Note: </strong> {note} </p>}
