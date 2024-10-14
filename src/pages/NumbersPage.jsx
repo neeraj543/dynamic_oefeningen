@@ -23,7 +23,7 @@ export function NumbersPage() {
 
     return (
         <div className="mx-3" >
-            <Numbers numbers={numberrs} title="alle getallen"/>
+            <Numbers numbers={numberrs} isInitiallyOpen={true} title="alle getallen"/>
             <Numbers numbers={numberrs.filter(n=>n>6)} title="getallen>6"/>
             <Numbers numbers={numberrs.map(n => n*2)} title="getallen * 2"/>
         </div>

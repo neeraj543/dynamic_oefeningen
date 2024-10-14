@@ -8,7 +8,7 @@ export function StatePage() {
 
     return (
         <>
-            <Section title="state">
+            <Section title="state" isInitiallyOpen={true}>
                 <div>
                     <DemoValue value={demoValue} onValueChange={setDemoValue}/>
                 </div>

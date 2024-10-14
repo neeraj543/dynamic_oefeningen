@@ -4,11 +4,17 @@ import {SectionCard} from "./SectionCard.jsx";
 import '../App.css';
 
 export function Numbers(props) {
-    const { numbers, title} = props;
-
+    const {numbers, title, isInitiallyOpen, onSelectNumber, markedNumbers} = props
     return (
-        <Section title={title} >
-                   {numbers?.map((num, index) => <SectionCard key = {index}>{num}</SectionCard>)}
+        <Section title={title} isInitiallyOpen={isInitiallyOpen}>
+            {numbers.map((n, i) =>
+                <SectionCard key={i}
+                             onSelect={onSelectNumber && (() => onSelectNumber(n))}
+                             isMarked={markedNumbers?.includes(n)}
+                >
+                    {n}
+                </SectionCard>)
+            }
         </Section>
     );
 }

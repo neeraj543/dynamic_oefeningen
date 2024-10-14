@@ -31,10 +31,10 @@ export function Car(props){
 
 //Cars
 export function Cars(props){
-    const {cars, title, info} = props;
+    const {cars, title, info, isInitiallyOpen} = props;
 
     return (
-        <Section title = {title}>
+        <Section title = {title} isInitiallyOpen = {isInitiallyOpen}>
             {cars.map(car => <Car car={car} key={car.id}/>)}
         </Section>
     );

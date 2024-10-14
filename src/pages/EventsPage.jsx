@@ -29,7 +29,7 @@ export function EventDemo(props) {
 
     return (
         <>
-            <Section title={title}>
+            <Section title={title} isInitiallyOpen={true}>
                 <div className="d-grid gap-2">
                     <Button onClick={handleClick} variant="primary" size="lg">
                         click me please!

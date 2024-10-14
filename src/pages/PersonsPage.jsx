@@ -22,7 +22,7 @@ export function PersonsPage() {
     const ages = personData.map(p => p.age);
     return (
         <div className="mx-3">
-            <Persons persons={personData} title="people"/>
+            <Persons persons={personData} isInitiallyOpen ={true} title="people"/>
             <Persons persons={personData.toSorted((pl, pr) => pr.age - pl.age)} title="Volgens leeftijd"/>
             <Numbers numbers={ages} title="Ages"/>
             <Numbers

@@ -10,6 +10,8 @@ import {CarsPage} from "./pages/CarsPage.jsx";
 import {PersonsPage} from "./pages/PersonsPage.jsx";
 import {EventsPage} from "./pages/EventsPage.jsx";
 import {StatePage} from "./pages/StatePage.jsx";
+import {FavoriteNumberPage} from "./pages/FavoriteNumberPage.jsx";
+import {NUMBER_DATA} from "./data/data.js";
 
 function App() {
     return (
@@ -23,6 +25,7 @@ function App() {
                     <Tab>Persons</Tab>
                     <Tab>Events page</Tab>
                     <Tab>State</Tab>
+                    <Tab>Fav Numbers</Tab>
                 </TabList>
 
                 <TabPanel>
@@ -51,6 +54,10 @@ function App() {
 
                 <TabPanel>
                     <StatePage/>
+                </TabPanel>
+
+                <TabPanel>
+                    <FavoriteNumberPage numbers={NUMBER_DATA} />
                 </TabPanel>
             </Tabs>
         </div>
