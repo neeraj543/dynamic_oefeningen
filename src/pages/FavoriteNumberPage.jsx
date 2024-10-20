@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button, Container } from "react-bootstrap";
 import {Numbers} from "../components/Numbers";
 
-
 export function FavoriteNumberPage(props) {
     const {numbers} = props;
     const [favorite, setFavorite] = useState();
