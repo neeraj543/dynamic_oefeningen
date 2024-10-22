@@ -5,8 +5,10 @@ import {Form} from "react-bootstrap";
 export function SearchPersonsPage(prop){
     const{persons} = prop;
     const [search, setStateSearch] = useState("");
+
     const filteredPersons = persons.filter(p =>  p.name.toLowerCase().includes(search.toLowerCase()) ||
         p.city.toLowerCase().includes(search.toLowerCase()));
+
 
     return(
         <div>
@@ -16,8 +18,8 @@ export function SearchPersonsPage(prop){
                     value={search}
                     onChange={e => setStateSearch(e.target.value)}/>
             </Form>
+
             <Persons persons={filteredPersons} isInitiallyOpen ={true} title="people"/>
         </div>
-
     );
 }
