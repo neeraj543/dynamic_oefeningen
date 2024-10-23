@@ -116,7 +116,7 @@ function DemoValueIncrement(props) {
 
 
 
-function MyButton(props) {
+export function MyButton(props) {
     const {onClick, children} = props;
     return (
         <Button variant="primary" className="m-2" onClick={onClick}> {children} </Button>

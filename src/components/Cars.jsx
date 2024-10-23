@@ -33,6 +33,10 @@ export function Car(props){
 export function Cars(props){
     const {cars, title, info, isInitiallyOpen} = props;
 
+    if(!Cars || cars.length === 0){
+        return <p>No cars exist!!!😭</p>
+    }
+
     return (
         <Section title = {title} isInitiallyOpen = {isInitiallyOpen}>
             {cars.map(car => <Car car={car} key={car.id}/>)}
